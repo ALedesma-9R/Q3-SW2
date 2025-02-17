@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- BS SETUP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- JS SETUP -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<title>Seatwork#2: JS Operators and Functions</title>
+</head>
+ <body>
+
+ 	<!-- OUTPUT -->
+ 	<div class="container">
+ 		<h2 class="text-center"><span class="rounded">Math Time with Ma'am Pasco</h2>
+ 	</div>
+
+ 	<div class="container">
+ 		<div class="row">
+ 			<div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center">
+ 				<img src="https://i.pinimg.com/736x/41/74/bf/4174bfca4d4ac45a48aabdb0686f258a.jpg" class="thumbnail">
+	 			<div class="talkbubble" id="maam_Text">
+	 				<p>Hello, student! I am your teacher, Ma'am Pasco!</p>
+	 			</div>
+	 		</div>
+ 			<div class="col-md-6 row1 p-3">
+ 				<p class="prompt">Enter a value for <kbd>a</kbd>:</p>
+ 				<input type="text" class="form-control" id="a_Value">
+ 				<br>
+ 				<p class="prompt">Enter a value for <kbd>b</kbd>:</p>
+ 				<input type="text" class="form-control" id="b_Value">
+ 			</div>
+ 		</div>
+
+ 		<hr>
+
+ 		<h3>Math Operations</h3>
+ 		<div class="row row2">
+ 			<div class="col-md-6">
+	 			<button type="button" class="btn warning" onclick="abProducts_input()">product of a and b<span class="ribbon">a*b</span></button>
+	 			<br>
+	 			<button type="button" class="btn warning" onclick="abRemainder_input()">get the remainder<span class="ribbon">a%b</span></button>
+ 			</div>
+
+ 			<div class="col-md-6">
+ 				<span>
+	 			<button type="button" class="btn warning" onclick="abExponents_input()">a raised to b<span class="ribbon">a**b</span></button>
+	 			<br>
+	 			<button type="button" class="btn warning" onclick="abEquality_input()">check if a is equal to b<span class="ribbon">a==b</span></button>
+ 			</div>
+ 		</div>
+ 	</div>
+
+ 	<!-- SCRIPT -->
+ 	<script type="text/javascript">
+ 		function abProducts_input() { // input seperates from the actual result
+ 			var a = document.getElementById('a_Value').value;
+ 			var b = document.getElementById('b_Value').value;
+ 			var abProducts = Math.round (a * b);
+
+ 		document.getElementById('maam_Text'). innerHTML = `The <strong><u>product</u></strong> of <kbd>a</kbd> and <kbd>b</kbd> is ` + abProducts + '!'; // element referenced is maam_Text so it goes inside the text bubble
+ 		}
+
+ 		function abRemainder_input() {
+ 			var a = document.getElementById('a_Value').value;
+ 			var b = document.getElementById('b_Value').value;
+ 			var abRemainder = a % b;
+
+ 		document.getElementById('maam_Text').innerHTML = `The <strong><u>remainder</u></strong> of <kbd>a</kbd> and <kbd>b</kbd> is ` + abRemainder + '!';
+ 		}
+
+ 		function abExponents_input() {
+ 			var a = document.getElementById('a_Value').value;
+ 			var b = document.getElementById('b_Value').value;
+ 			var abExponents = a ** b;
+
+ 		document.getElementById('maam_Text').innerHTML = `The <strong><u>exponentiation</u></strong> of <kbd>a</kbd> and <kbd>b</kbd> is ` + abExponents + '!';
+ 		}
+
+ 		function abEquality_input() {
+ 			var a = document.getElementById('a_Value').value;
+ 			var b = document.getElementById('b_Value').value;
+ 			var abEquality = a == b;
+
+ 		document.getElementById('maam_Text').innerHTML = `The <strong><u>equality</u></strong> of <kbd>a</kbd> and <kbd>b</kbd> is ` + abEquality + '!';
+ 		}
+ 	</script>
+
+ 	<!-- FOOTER -->
+	<div class="footer text-center"><p><a href="https://github.com/ALedesma-9R/Q2EX2">&#169; AY 24-25 | ICT 9-R | Aisha Ashley O. Ledesma</a></p>
+		<ul>
+			<li><a href="https://ph.pinterest.com/pin/404057397820569066/" class="text-warning">https://ph.pinterest.com/pin/404057397820569066/</a></li>
+			<li><a href="https://www.raket.ph/thcloset720/products/cozy-classroom-zoom-virtual-background" class="text-warning">https://www.raket.ph/thcloset720/products/cozy-classroom-zoom-virtual-background</a></li>
+		</ul>
+	</div>
+ </body>
+</html>
